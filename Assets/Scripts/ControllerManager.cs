@@ -19,9 +19,9 @@ public class ControllerManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "hitCube")
+        if (other.tag == "HitBall")
         {
-            //((HitBoxManager)other)
+            other.gameObject.GetComponent<HitBoxManager>().IsHit();
         }
     }
 }
